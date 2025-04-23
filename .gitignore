@@ -1,3 +1,4 @@
 localhost-*
 localhost-key.perm
 localhost.pem
+/node_modules

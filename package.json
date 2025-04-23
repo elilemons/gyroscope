@@ -1,0 +1,14 @@
+{
+  "name": "gyroscope",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup-local-cert": "install -g local-ssl-proxy; mkcert localhost",
+    "start": "npx --yes http-server -p 3000 && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.9.0"
+}

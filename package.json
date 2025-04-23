@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "setup-local-cert": "pnpm install -g local-ssl-proxy && mkcert localhost",
-    "start": "concurrently \"npx --yes http-server -p 3000\" \"local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem\""
+    "start": "browser-sync start --server --files '**/*' --https --cert localhost.pem --key localhost-key.pem --port 3010"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.9.0",
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "concurrently": "^9.1.2"
   }
 }
